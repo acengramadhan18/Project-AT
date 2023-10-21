@@ -1,0 +1,36 @@
+{
+  "name": "wdio-doss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test-local1": "npm run screenshot && ./node_modules/.bin/wdio ./wdio.conf.local.js",
+    "test-local": "./node_modules/.bin/wdio ./wdio.conf.local.js",
+    "test-selenoid-sit": "./node_modules/.bin/wdio ./wdio.conf.selenoid.sit.js",
+    "allure:history": "mkdir -p allure-report/history ./allure-results/history && cp -a allure-report/history .allure-results/",
+    "allure-report": "allure generate --clean ./allure-results && allure open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "astraazure@vs-ssh.visualstudio.com:v3/astraazure/AstraQA-SOTD/wdio-doss"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@babel/preset-env": "^7.21.5",
+    "@babel/register": "^7.21.0",
+    "@influxdata/influxdb-client": "^1.33.2",
+    "@wdio/allure-reporter": "^8.10.2",
+    "@wdio/cli": "^8.10.2",
+    "@wdio/jasmine-framework": "^8.10.2",
+    "@wdio/local-runner": "^8.10.2",
+    "@wdio/spec-reporter": "^8.10.2",
+    "@wdio/sync": "^7.20.3",
+    "allure-commandline": "^2.13.8",
+    "chromedriver": "^118.0.0",
+    "dotenv": "^16.0.3",
+    "wdio-chromedriver-service": "^7.3.2"
+  }
+}
